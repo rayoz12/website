@@ -1,0 +1,201 @@
+html {
+	background-color: #272E36;
+    color: azure;
+}
+
+body{
+	text-align:center;
+}
+
+body > div{
+	margin: 0 20% 0 20%;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+table,td,th {
+    border: 1px inset #439eb8;
+    border-collapse: collapse;
+    padding: 15px;
+}
+/* Centre tables by default*/
+table {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 10px 7px 14px rgb(120, 57, 57);
+}
+
+th {
+    background-color: #376e78;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: rgba(99,99,99,51);
+}
+
+th:hover {
+    background-color: #5296a8;
+    font-weight: bold;
+}
+
+a[href] {
+	color: #6db2f6
+}
+
+a:visited {
+    color: #ff0027;
+}
+
+pre {
+    background-color: #CFD8DC;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 7px 12px 15px #505050;
+    padding: 1%;
+}
+
+hr {
+    color: #BDBDBD;
+}
+
+code {
+    font-size: 18px;
+    color: #c52c2c;
+}
+
+/*css 4 styles, the tester errors out and gives me a penalty as it doesn't recognise it.*/
+
+
+::selection {
+    background: red;
+}
+
+::-moz-selection {
+    background: red;
+}
+
+
+
+/*customise for each div here*/
+#header {
+    margin: 0;
+}
+
+#navigation {
+	padding:0 0 2% 0;
+    margin: 0;
+}
+
+#content {
+  	/*background-color: #B0BEC5;*/
+    color: azure;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#content > p {
+    text-align: left;
+}
+
+
+#footer {
+    margin-top: 2%;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*region header*/
+
+#headerImage {
+    width: 100%;
+    height: 200px;
+    z-index: -1;
+}
+
+.title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 60px auto;
+    font-size: 4em;
+    text-decoration: none;
+}
+
+/*endregion*/
+
+/*region Navbar css*/
+
+.navbar {
+    list-style-type: none;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #323232;
+    box-shadow: 0 27px 27px -24px rgb(255, 72, 72);
+}
+
+.navItem {
+    display:inline-block;
+}
+
+.navItem a {
+    display: block;
+    color: #b1b1b1;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.2s ease-in-out;
+	border-bottom: 3px solid #323232;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navItem a:hover{
+	color: rgba(255, 255, 255, 1);
+	box-shadow: inset 0 -17px 15px -15px rgba(202, 170, 224, 0.4);
+	border-bottom: 3px solid #439eb8;
+}
+
+.navItem a.active {
+    box-shadow: inset 0 -14px 15px -15px rgba(202, 170, 224, 0.4);
+    border-bottom: 3px solid #439eb8 !important;
+    color: azure;
+}
+
+.navLine {
+    margin-top: 0;
+}
+
+/*endregion*/
+
+#displayPhoto {
+    width: 400px;
+}
+
+.projectPicture {
+	width: 100%;
+}
+
+/*region utility*/
+
+.alignLeft {
+    text-align: left;
+}
+
+.alignCentre {
+    text-align: center;
+}
+
+.alignChildrenLeft > p,.alignChildrenLeft > ul,.alignChildrenLeft > ol {
+    text-align: left;
+}
+
+.floatRight {
+    float: right;
+}
+
+
+/*endregion*/
