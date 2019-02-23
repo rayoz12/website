@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://rytek.me/</loc>
+  <lastmod>2017-11-14T09:10:15+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://rytek.me/index.html</loc>
+  <lastmod>2017-11-14T09:10:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rytek.me/aboutMe.html</loc>
+  <lastmod>2017-11-14T09:10:15+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rytek.me/projects.html</loc>
+  <lastmod>2017-11-14T10:16:35+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/SnowBallWarfare/</loc>
+  <lastmod>2014-06-18T06:52:44+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/</loc>
+  <lastmod>2015-11-03T03:49:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/</loc>
+  <lastmod>2017-11-14T09:10:26+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Misc/divergence/</loc>
+  <lastmod>2017-11-14T09:10:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/SnowBallWarfare/Assets/Webpages/Help.html</loc>
+  <lastmod>2014-06-15T08:26:28+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/index.html</loc>
+  <lastmod>2015-11-03T03:49:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/topics.html</loc>
+  <lastmod>2015-11-03T03:49:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/about.html</loc>
+  <lastmod>2015-10-16T03:13:23+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/faq.html</loc>
+  <lastmod>2015-10-16T03:36:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/contact.html</loc>
+  <lastmod>2015-10-26T20:27:59+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/topics/intro.html</loc>
+  <lastmod>2015-11-03T03:49:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/topics/variables.html</loc>
+  <lastmod>2015-11-03T03:49:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/api/</loc>
+  <lastmod>2017-11-14T09:10:26+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/Users/</loc>
+  <lastmod>2017-11-10T06:37:20+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/SnowBallWarfare/Index.html</loc>
+  <lastmod>2014-06-18T06:52:44+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/CodeExplaination.html</loc>
+  <lastmod>2015-11-03T03:05:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://rytek.me/Projects/JavaLearner/CodeInputCheck.html</loc>
+  <lastmod>2015-11-03T03:05:23+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/Users/rayoz12/</loc>
+  <lastmod>2017-11-14T09:10:26+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/Users/rayoz12/coding/</loc>
+  <lastmod>2017-11-14T09:10:26+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/Users/rayoz12/testing.txt</loc>
+  <lastmod>2017-11-14T09:10:14+00:00</lastmod>
+  <priority>0.33</priority>
+</url>
+<url>
+  <loc>http://rytek.me/FileManager/Users/rayoz12/coding/test.txt</loc>
+  <lastmod>2017-11-14T09:10:14+00:00</lastmod>
+  <priority>0.26</priority>
+</url>
+</urlset>
