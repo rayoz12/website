@@ -1,8 +1,0 @@
-404 Resource not found.
-
-Sorry <!--#echo var="REQUEST_URI" --> does not exist on <!--#echo var="HTTP_HOST" -->
-
-<!--#echo var="REDIRECT_STATUS" -->
-<!-- 
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
---> 

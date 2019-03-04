@@ -1,4 +1,0 @@
-AuthUserFile "/home/ryanjper/.htpasswds/public_html/FileManager/passwd"
-AuthType Basic
-AuthName "File Manager Access"
-require valid-user
