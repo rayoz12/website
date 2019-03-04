@@ -17,26 +17,15 @@
         href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
+    
     <link href="/website.css" rel="stylesheet">
 
     <style>
         .jumbotron {
-            background-image: url('./all_subs.jpg');
+            background-image: none;
         }
-
-        @media (min-width: 768px) {
-            .jumbotron {
-                padding-top: calc(var(--jumbotron-padding-y) * 2);
-                padding-bottom: calc(var(--jumbotron-padding-y) * 2);
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 468px) {
-            .jumbotron {
-                background-position: -200px -50px;
-                height: 350px;
-            }
+        .jumbotron-text {
+            color: black;
         }
     </style>
 
@@ -66,13 +55,12 @@
 
                     <!-- Left -->
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/">About Me
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">About Me
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/projects">My Projects
-                            </a>
+                            <a class="nav-link" href="/projects">My Projects</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/projects">
@@ -111,20 +99,18 @@
 
         <section class="jumbotron text-center">
             <div class="container background">
+                <h1 class="jumbotron-heading text-info">Sorry this page is still under contruction!</h1>
+                <p class="lead jumbotron-text">
+                    It'll be here soon enough check back in a few days! In the meanwhile have a look elsewhere.
+                </p>
+                <p>
+                    <a href="/" class="btn btn-raised btn-primary my-2">Home</a>
+                </p>
             </div>
         </section>
-        <div class="content py-5 bg-light" id="content">
+        <div class="content py-5 bg-light">
             <div class="container">
-                <h1 class="display-2">
-                    Remote Operated underwater Vehicle using the building blocks of IoT
-                </h1>
-                <h2><small class="text-muted">A DIY adventure of using Python on a Pi and Pipes over 5 weeks to deliver a working ROV</small></h2>
-                <p></p>
-                <p class="lead">
-                    What you see above is the hard work of many groups and right in the middle is our ROV.
-                </p>
-                <p></p>
-                <p></p>
+                
             </div>
         </div>
 

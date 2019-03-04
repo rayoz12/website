@@ -10,94 +10,112 @@
 
     <title>Ryan Pereira</title>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/3.5.95/css/materialdesignicons.min.css">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet"
         href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
         integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
 
-    <link href="index.css" rel="stylesheet">
+    <link href="/website.css" rel="stylesheet">
+
 </head>
 
 <body>
 
     <header>
-        <div class="collapse bg-dark" id="navbarHeader">
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
             <div class="container">
-                <div class="row">
-                    <div class="col-sm-8 col-md-7 py-4">
-                        <h4 class="text-white">About</h4>
-                        <p class="text-muted">Add some information about the album below, the author, or any other
-                            background context. Make it a few sentences long so folks can pick up some informative
-                            tidbits. Then, link them off to some social networking sites or contact information.</p>
-                    </div>
-                    <div class="col-sm-4 offset-md-1 py-4">
-                        <h4 class="text-white">Contact</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="https://github.com/rayoz12" class="text-white">Github</a></li>
-                            <li><a href="https://www.linkedin.com/in/ryanjpereira/" class="text-white">Linkedin</a></li>
-                            <li><a href="mailto:ryan@ryanjpereira.com" class="text-white">ryan@ryanjpereira.com</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar navbar-dark bg-dark box-shadow">
-            <div class="container d-flex justify-content-between">
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <i class="material-icons">person</i>
-                    <strong> Ryan Pereira</strong>
+
+                <!-- Brand -->
+                <a class="navbar-brand" href="/">
+                    <strong>Ryan Pereira</strong>
                 </a>
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <i class="material-icons">book</i>
-                    <strong> About me</strong>
-                </a>
-                <a href="#" class="navbar-brand d-flex align-items-center">
-                    <i class="material-icons">code</i>
-                    <strong> My Projects</strong>
-                </a>
-                <button id="navbar-details" class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false"
+
+                <!-- Collapse -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <!-- Left -->
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">About Me
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/projects">My Projects
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/projects">
+                                Contact me
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- Right -->
+                    <ul class="navbar-nav nav-flex-icons">
+                        <li class="nav-item">
+                            <a href="http://github.com/rayoz12" class="nav-link" target="_blank">
+                                <span class="mdi mdi-github-box mdi-24px"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://www.linkedin.com/in/ryanjpereira/" class="nav-link" target="_blank">
+                                <span class="mdi mdi-linkedin-box mdi-24px"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="mailto:ryan@ryanjpereira.com" class="nav-link">
+                                <span class="mdi mdi-email mdi-24px"></span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
             </div>
-        </div>
+        </nav>
+        <!-- Navbar -->
     </header>
 
     <main role="main">
 
         <section class="jumbotron text-center">
             <div class="container background">
-                <h1 class="jumbotron-heading">Ryan Pereira</h1>
+                <h1 class="jumbotron-heading">My Projects</h1>
                 <p class="lead jumbotron-text">
-                    Hi, my name is Ryan Pereira, and I'm a current student studying at the University of Technology
-                    Sydney. I'm
-                    currently in my final year
-                    bachelor's degree of Engineering, majoring in ICT Engineering, sub-majoring in Software.
+                    I've completed a lot of projects through extracurricular activities at University and in my own spare time in different technical.
+                    They range from traditional software engineering to established fields and emerging technologies
                 </p>
                 <p>
-                    <button class="btn btn-raised btn-primary my-2">Checkout my Projects</button>
-                    <button class="btn btn-raised btn-secondary my-2"
-                        onclick="document.querySelector('#navbar-details').click()">Contact me</button>
+                    <button onclick="document.querySelector('#content').scrollIntoView({behavior: 'smooth', block: 'start'})" class="btn btn-raised btn-primary my-2">Checkout my Projects</button>
                 </p>
             </div>
         </section>
-        <div class="album py-5 bg-light">
+        <div class="content py-5 bg-light" id="content">
             <div class="container">
                 <div class="row mb-2">
                     <div class="col-md-6">
                         <div class="card flex-md-row mb-4 box-shadow h-md-250">
                             <div class="card-body d-flex flex-column align-items-start">
-                                <strong class="d-inline-block mb-2 text-primary">IoT</strong>
+                                <strong class="d-inline-block mb-2 text-info">IoT</strong>
                                 <h3 class="mb-0">
-                                    <a class="text-dark" href="#">Submarine Project</a>
+                                    <a class="text-dark" href="./submarine/index.html">Submarine Project</a>
                                 </h3>
-                                <div class="mb-1 text-muted">Nov 12</div>
-                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
-                                    natural lead-in to
-                                    additional content.</p>
-                                <a href="#">Continue reading</a>
+                                <div class="mb-1 text-muted"> </div>
+                                <p class="card-text mb-auto">
+                                    A from scratch submersible built using Python, Raspberry Pi, PVC Pipes, boatload of sensors and hard work!
+                                </p>
+                                <a href="./submarine/index.html">Continue reading</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block"
                                 data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -110,13 +128,14 @@
                             <div class="card-body d-flex flex-column align-items-start">
                                 <strong class="d-inline-block mb-2 text-success">Systems of Systems</strong>
                                 <h3 class="mb-0">
-                                    <a class="text-dark" href="#">Smart Restaurant System</a>
+                                    <a class="text-dark" href="./smart_restaurant_system/index.html">Smart Restaurant System</a>
                                 </h3>
-                                <div class="mb-1 text-muted">Nov 11</div>
-                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
-                                    natural lead-in to
-                                    additional content.</p>
-                                <a href="#">Continue reading</a>
+                                <div class="mb-1 text-muted"></div>
+                                <p class="card-text mb-auto">
+                                    Spanning from a robotic humaniod waiter to many management engines this is a system of systems
+                                    built to manage multiple components of a Restaurant.
+                                </p>
+                                <a href="./smart_restaurant_system/index.html">Continue reading</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block"
                                 data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -130,15 +149,15 @@
                     <div class="col-md-6">
                         <div class="card flex-md-row mb-4 box-shadow h-md-250">
                             <div class="card-body d-flex flex-column align-items-start">
-                                <strong class="d-inline-block mb-2 text-primary">Web Applications</strong>
+                                <strong class="d-inline-block mb-2 text-warning">Web Applications</strong>
                                 <h3 class="mb-0">
-                                    <a class="text-dark" href="#">Song Chooser</a>
+                                    <a class="text-dark" href="./../under_contruction.html">Song Chooser</a>
                                 </h3>
-                                <div class="mb-1 text-muted">Nov 12</div>
-                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
-                                    natural lead-in to
-                                    additional content.</p>
-                                <a href="#">Continue reading</a>
+                                <div class="mb-1 text-muted"> </div>
+                                <p class="card-text mb-auto">
+                                    A digital library and projection generator to bring my communicty from the dark ages of paper.
+                                </p>
+                                <a href="./../under_contruction.html">Continue reading</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block"
                                 data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
@@ -152,17 +171,38 @@
                                 <strong class="d-inline-block mb-2 text-success">Microcontrollers & Embedded
                                     Systems</strong>
                                 <h3 class="mb-0">
-                                    <a class="text-dark" href="#">Embedded Development</a>
+                                    <a class="text-dark" href="./../under_contruction.html">Embedded Development</a>
                                 </h3>
-                                <div class="mb-1 text-muted">Nov 11</div>
+                                <div class="mb-1 text-muted"> </div>
                                 <p class="card-text mb-auto">This is a wider card with supporting text below as a
                                     natural lead-in to
                                     additional content.</p>
-                                <a href="#">Continue reading</a>
+                                <a href="./../under_contruction.html">Continue reading</a>
                             </div>
                             <img class="card-img-right flex-auto d-none d-md-block"
                                 data-src="holder.js/200x250?theme=thumb" alt="Thumbnail [200x250]"
                                 style="width: 200px; height: 250px;"
+                                src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16938f4e2f6%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16938f4e2f6%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.20000076293945%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+                                data-holder-rendered="true">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <strong class="d-inline-block mb-2 text-accent">The Earliest Projects</strong>
+                                <h3 class="mb-0">
+                                    <a class="text-dark" href="./../under_contruction.html">Initial Projects</a>
+                                </h3>
+                                <div class="mb-1 text-muted"> </div>
+                                <p class="card-text mb-auto">This is a wider card with supporting text below as a
+                                    natural lead-in to
+                                    additional content.</p>
+                                <a href="./../under_contruction.html">Continue reading</a>
+                            </div>
+                            <img class="card-img-right flex-auto d-none d-md-block" data-src="holder.js/200x250?theme=thumb"
+                                alt="Thumbnail [200x250]" style="width: 200px; height: 250px;"
                                 src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22250%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20250%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16938f4e2f6%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A13pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16938f4e2f6%22%3E%3Crect%20width%3D%22200%22%20height%3D%22250%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2256.20000076293945%22%20y%3D%22131%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
                                 data-holder-rendered="true">
                         </div>
@@ -194,6 +234,8 @@
     <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
         integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
         crossorigin="anonymous"></script>
+
+    <script src="/website.js"></script>
 </body>
 
 </html>
