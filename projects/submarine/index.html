@@ -38,6 +38,16 @@
                 height: 350px;
             }
         }
+
+        .control-ui {
+            width: 50%;
+            height: 50%;
+        }
+
+        .gallery-pic {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
 </head>
@@ -113,18 +123,211 @@
             <div class="container background">
             </div>
         </section>
-        <div class="content py-5 bg-light" id="content">
+        <div class="content article py-5 bg-light" id="content">
             <div class="container">
                 <h1 class="display-2">
                     Remote Operated underwater Vehicle using the building blocks of IoT
                 </h1>
-                <h2><small class="text-muted">A DIY adventure of using Python on a Pi and Pipes over 5 weeks to deliver a working ROV</small></h2>
+                <h2><small class="text-muted">A DIY adventure of using Pi, Python and Pipes over 5 weeks to deliver a
+                        working ROV</small></h2>
                 <p></p>
                 <p class="lead">
                     What you see above is the hard work of many groups and right in the middle is our ROV.
                 </p>
                 <p></p>
-                <p></p>
+
+                <div class="my-5 py-3">
+                    <p>
+                        During the summer me and a couple of friends (a group of 5) had decided to take up an experimental summer
+                        subject where we would be given a project and be expected to complete it in any means possible. 
+                        The problem posed to us was to build a complete ROV using a set of COTS IoT tools. 
+                        The tools we were given to make this happen were:
+                        <ul>
+                            <li>2 Raspberry Pis</li>
+                            <li>Python</li>
+                            <li>
+                                Sensors such as:
+                                <ul>
+                                    <li>Camera</li>
+                                    <li>Motion / Gyro</li>
+                                    <li>Temperature</li>
+                                    <li>Underwater compatible Ultrasonic sensors</li>
+                                </ul>
+                            </li>
+                            <li>3 Motors</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Why Python in the IoT Domain.</h3>
+                    <hr />
+                    <p>
+                        I choose Python and IOT because it seems like an interesting concept to work with. Another
+                        aspect of my studio that
+                        caught my attention was the use of python in for embedded systems. Python is not usually
+                        targetted to embedded systems
+                        as it would be too slow for real time contraints so I wanted to expereince how we would overcome
+                        this challenge.
+                        The prospect of applying Python to IoT devices otherwise is interesting as you get all the
+                        benefits of a high level
+                        language while still in an environment constrained by limited resources.
+                    </p>
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Requirements and Technical Challenges Associated</h3>
+                    <hr />
+                    <div class="text-center">
+                        <img src="./requirements.png" alt="a picture of the requirements" class="rounded mx-auto d-block"/>
+                        <small>A list of requirements as set by the client</small>
+                    </div>
+                    <br/>
+                    <p>
+                        A requirement's list was given to us to guide us in creating the ROV (certainly one of the better clients). 
+                        However due to budget and time constraints we could only meet some of these requirements.
+                        We decided to focus on:
+                        <ol>
+                            <li>Live HD Video</li>
+                            <li>Acquiring and Storing Data (in this case pictures and sensors) in the cloud and locally</li>
+                            <li>Highly maneuverable thruster configuration </li>
+                            <li>Easy to use, portable, cross-platform and user interface</li>
+                        </ol>
+                        In addition we decided to add our own requirements:
+                        <ol start="5">
+                            <li>Independent Control UI and ROVs so that one Control UI can control multiple ROVs</li>
+                            <li>Integration with a game controller for ease of use</li>
+                        </ol>
+                    </p>
+                    <br />
+                    <h4>Technical Challanges</h4>
+                    <p>
+                        There were certain technical challenges we have to overcome to reach the requirements.
+                        <ol>
+                            <li>Real time contrained environment with tools that aren't designed for it</li>
+                            <li>Cross Platform & portable</li>
+                            <li>Constructing a ROV body that was waterproof to protect the electronics and one that could move through water.</li>
+                            <li>An Architecture that supported the use of multiple ROVs</li>
+                        </ol>
+
+                        We also had the technical challenge of WiFi being unusable underwater but comprimsed on a wired solution.
+                    </p>
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Architecture</h3>
+                    <hr />
+                    <div class="text-center">
+                        <img src="./Arch.png" alt="Architecture" class="rounded mx-auto d-block" />
+                        <small>Architecture</small>
+                    </div>
+                    <p>
+                        The control unit essentially acted as a gateway for operators and other applications to access the ROVs.
+                        It acted as a router by automatically discovering ROVs connecting to it and displaying it on the Control UI.
+                        It also provides a user friendly view for the user to control 1 or many ROVs as well as view the camera and sensor live feed.
+
+                        This was extremely flexible and robot becuase there was nothing that needed to be configure on the ROVs
+                        so it could be easily connected above water and deployed.
+                    </p>
+                
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Cross Platform & Portable</h3>
+                    <hr />
+                    <p>
+                        As part of the requirements we had to design fwith cross platform in mind, as such we had to use interfaces that were
+                        extremely interoperable with other systems. 
+                        We chose to implement a REST API and a WebSocket Server which offered the same API. The websocket connection however offered
+                        faster connection and reliable speeds.
+
+                        The connection interface was written straight into the motor and sensor driver interface for performance reasons.
+                        We used the Flask and Websocket library to implement this.
+                        
+                        The control unit connected to one or many ROVs and sent its commands to the flask server sitting on the ROV.
+                        The control unit hosted it's own Flask server for the user or another application to interact with.
+                    </p>
+                    <br/>
+                    <h4>An early revision of the UI</h4>
+                    <img class="control-ui rounded mx-auto d-block" src="./Control UI.jpg">
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Real time environment</h3>
+                    <hr />
+                    <p>
+                        In IoT use cases a real time environment will be a mandatory constraint. 
+                        The tool used depends on how much of an effect the environment has on the application.
+                        From microncontroller on bare metal for control systems to high level application such as fridges there are 
+                        varying applications.
+                    </p>
+                    <p>
+                        In our case performance matters, the feedback loop between the ROV and operator needs to be as small as possible
+                        for responsive controls. The client specified Python on the Pi, two tools which aren't targetted to real time constrints.
+                        This meant our application had to be as performant as possible. There were several targeted improvements we made:
+                        <ul>
+                            <li>Live streaming solution used for MPEG-DASH (H.264) to enable hardware encoding of video for a responseive camera feed.</li>
+                            <li>Seperate channels for each sensor on the ROV so that one sensor read wouldn't stop the others</li>
+                            <li>Websockets for 2 way communication</li>
+                            <li>Game controller for fine control of motors and movement</li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Chassis</h3>
+                    <hr />
+                    <p>
+                        The chassis was arguable the most challenging component of the ROV. With our limited knowledge as software engineers we 
+                        had to ensure that it would be completely waterproof and prevent any water from getting to the electronics.
+
+                        The advice given to us was to use silicon to proof it as much as we could and we did exactly that.
+                        On some shots of the ROV its obvious how much we placed on it.
+
+                        The propelloers attached to the motors were also custom 3d designed and printed for our solution.
+                    </p>
+                    <p>
+                        In the end however it worked, you can see us testing it out in the video below.
+                    </p>
+                </div>
+
+                <div class="my-5 py-3">
+                    <h3>Continuing On</h3>
+                    <hr />
+                    <p>
+                        Following this project in my own time I set about creating an autonomous Remote control car,
+                        reusing much of the Python GPIO interfaces and user interfaces. 
+                    </p>
+                </div>
+
+                <h3>Raspberry Pi Connections and Motors</h3>
+                <video src="./underwater-test-clipped.mp4" class="rounded mx-auto d-block" controls></video>
+
+                <h3>Raspberry Pi Connections and Motors</h3>
+                <video src="./motor_assembly.mp4" controls></video>
+
+                <h3>Gallery</h3>
+                <div class="row">
+                    <div class="col">
+                        <img class="gallery-pic rounded mx-auto d-block" src="./pi_connectors.jpg">
+                        <small> GPIO Connectors from the Pi to the internal motor controllers</small>
+                    </div>
+                    <div class="col">
+                        <img class="gallery-pic rounded mx-auto d-block" src="./sub construction.jpg">
+                        <small> Construction of the ROV Chassis</small>
+                    </div>
+                </div>
+                <div class="row my-5 py-3">
+                    <div class="col">
+                        <img class="gallery-pic rounded mx-auto d-block" src="./underwater test.png">
+                        <small> Testing the ROV underwater</small>
+                    </div>
+                    <div class="col">
+                        <img class="gallery-pic rounded mx-auto d-block" src="./group photo.jpg">
+                        <small> Members of the group</small>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -133,7 +336,7 @@
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
-                <a href="#">Back to top</a>
+                <a href="#" class="text-danger">Back to top</a>
             </p>
             <p>&copy; Ryan Pereira</p>
         </div>

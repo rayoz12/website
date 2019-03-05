@@ -56,6 +56,12 @@ footer p {
     color: ghostwhite;
 }
 
+/* Footer color for sake of consistency with Navbar */
+
+.page-footer {
+    background-color: #929FBA;
+}
+
 .box-shadow {
     box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
@@ -91,18 +97,17 @@ html, body, .view {
 
 @media only screen and (max-width: 768px) {
     .navbar {
-        background-color: #929FBA;
+        background-color: rgb(65, 65, 65);
     }
 }
 
 @media (min-width: 800px) and (max-width: 850px) {
     .navbar:not(.top-nav-collapse) {
-        background: #929FBA !important;
+        background: rgb(65, 65, 65) !important;
     }
 }
 
-/* Footer color for sake of consistency with Navbar */
-
-.page-footer {
-    background-color: #929FBA;
+/* Article */
+.article {
+    font-size: 1.2em;
 }
